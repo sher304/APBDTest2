@@ -12,6 +12,7 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 builder.Services.AddScoped<RacerInterface, RacerService>();
+builder.Services.AddScoped<TrackRacerInterfcae, TrackRacerService>();
 
 var app = builder.Build();
 
